@@ -56,7 +56,7 @@ int main()
               if(a[i].rnt<=ts && a[i].rnt>0)
               {
                      time = time + a[i].rnt;
-                     printf(" -> [P%d] <- %d",a[i].p,time);
+                     printf(" -> [P%d] <- %d",a[i].p+1,time);
                      a[i].rnt=0;
                      flag=1;
               }
@@ -64,7 +64,7 @@ int main()
               {
                      a[i].rnt = a[i].rnt - ts;
                      time = time + ts;
-                     printf(" -> [P%d] <- %d",a[i].p,time);
+                     printf(" -> [P%d] <- %d",a[i].p+1,time);
               }
               if(a[i].rnt==0 && flag==1)
               {
@@ -88,7 +88,7 @@ int main()
        printf("***************************************\n");
        for(i=0;i<pro;i++)
        {
-              printf("P%d\t%d\t%d\t%d\t%d\n",a[i].p,a[i].art,a[i].but,a[i].tat,a[i].wtt);
+              printf("P%d\t%d\t%d\t%d\t%d\n",a[i].p+1,a[i].art,a[i].but,a[i].tat,a[i].wtt);
        }
        printf("***************************************\n");
        avgwt = avgwt/pro;
